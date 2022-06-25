@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+--orange: hsl(31, 77%, 52%);
+--turquoise: hsl(184, 100%, 22%);
+--green: hsl(179, 100%, 13%);
+--gray: hsla(0, 0%, 100%, 0.75);
+--white: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    width: 800px;
+    height: 400px;
+}
+
+img, h1, p, button {
+    margin: 22px;
+}
+
+.sedans {
+    background-color: var(--orange);
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.suvs {
+    background-color: var(--turquoise);
+}
+
+.luxury {
+    background-color: var(--green);
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    color: var(--white);
+}
+
+p, button {
+    font-family: 'Lexend Deca';
+}
+
+p {
+    color: var(--gray);
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--white);
+    border: solid 1px var(--white);
+}
+
+.sedans button {
+    color: var(--orange);
+}
+
+.sedans button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.suvs button {
+    color: var(--turquoise);
+}
+
+.suvs button:hover {
+    background-color: var(--turquoise);
+    color: var(--white);
+}
+
+.luxury button {
+    color: var(--green);
+}
+
+.luxury button:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 80px;
+    }
+
+    .sedans {
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        border-bottom-left-radius: 0px;
+    }
+    
+    .luxury {
+        border-bottom-right-radius: 14px;
+        border-bottom-left-radius: 14px;
+        border-top-right-radius: 0px;
+    }
+}
